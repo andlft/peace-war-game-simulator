@@ -3,11 +3,9 @@ from helpers.base_strategy import BaseStrategy
 
 class HoldsGrudges (BaseStrategy):
     def take_decision(past_events: List[Tuple[bool, bool]]) -> bool:
-        ok = False
+        ok = True
         for i in past_events:
             if not i[1]:
-                ok = True
+                ok = False
                 break
-        if ok:
-            return False
-        return True
+        return ok
