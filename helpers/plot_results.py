@@ -14,5 +14,6 @@ def plot_results(results: Dict[str, int]) -> None:
     plt.barh(strategy_names, strategy_scores)
     plt.xlabel("Score")
     plt.ylabel("Strategy")
+    plt.subplots_adjust(left=0.33)
 
     plt.show()
